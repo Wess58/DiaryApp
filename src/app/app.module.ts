@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { DiaryComponent } from './diary/diary.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DiaryComponent
   ],
   imports: [
     BrowserModule
