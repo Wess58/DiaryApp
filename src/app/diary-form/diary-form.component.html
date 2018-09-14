@@ -1,17 +1,41 @@
-<p>
-  diary-form works!
-</p>
-<button id="New"class="btn btn-outline-default" name="button">New Story</button>
-<form  method="post">
-    <div class="form-group">
-      <!-- <label for="">Title</label> -->
-      <input type="text" name="" required class="form-group" placeholder="Title of story ">
-    </div>
-    <div class="form-group">
-      <label for="Story">Tell me your story</label>
-      <textarea id="story" rows="10" cols="80" required></textarea>
+<!-- Always use required for any inputs -->
+<!-- [hidden] attribute is necessary for form validation -->
+<div class="container-fluid">
+  <div class="row">
 
-    </div>
+    <form (ngSubmit)='submitDiary()' #diaryForm='ngForm'>
+      <div class="form-group">
 
+        <input type="text" class="form-control" placeholder="Title of story" id="name" [(ngModel)]="newDiary.name" name="name"  #name="ngModel"  required>
 
-</form>
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          <p class="required">Name Required!</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+
+        <label for="description">Story</label>
+        <textarea class="form-control" id="description" rows="8" cols="50" [(ngModel)]="newDiary.description" #description="ngModel" name="description" placeholder="Tell us your story" required></textarea>
+        <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+          <p class="required">Story Required!</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+
+        <label for="complete">When it happened</label>
+        <br>
+        <input type='date' id="complete" [(ngModel)]="newDiary.completeDate" name="completeDate" #completeDate="ngModel" placeholder="Enter Date" required>
+
+        <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
+          <p class="required">Date Required!</p>
+        </div>
+
+      </div>
+
+      <button type="Submit" class="btn btn-outline-light btn-lg">Add Story</button>
+
+    </form>
+  </div>
+</div>

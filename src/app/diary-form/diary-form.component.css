@@ -1,0 +1,11 @@
+.btn-outline-dark{
+  margin-bottom: 2em;
+}
+.btn-outline-dark:hover{
+
+}
+.required{
+  font-size: 20px;
+  height: 5px;
+  padding: 0;
+}

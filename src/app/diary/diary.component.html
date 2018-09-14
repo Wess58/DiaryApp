@@ -1,4 +1,19 @@
-<p>
-  diary works!
-</p>
-<app-diary-form></app-diary-form>
+<!-- <p>
+  diary Component works!
+</p> -->
+<div class="container">
+
+<ul>
+  <div *ngFor='let diary of diaries ; let i = index'>
+    <li>{{diary.name}} happened on {{diary.completeDate|date|uppercase}}</li>
+
+      <button class="btn btn-outline-danger"(click)='toogleDetails(i)'>Show Story</button>
+
+    <app-diary-details *ngIf="diary.showDescription"  [diary]='diary' (isComplete)='completeDiary($event,i)'></app-diary-details>
+  </div>
+</ul>
+<p *ngIf='diaries.length > 5'>You have Many Stories HAHA </p>
+
+<app-diary-form (addDiary)="addNewDiary($event)"></app-diary-form>
+
+</div>

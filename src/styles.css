@@ -1,2 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+body{
+  font-family: 'Gamja Flower', cursive;
+  font-size: 28px;
+  background-color: #f5b7b1;
+  margin-top: 2em;
+}

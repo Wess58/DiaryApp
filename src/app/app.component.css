@@ -1,0 +1,12 @@
+/* .container-fluid{
+    background-image: linear-gradient(to bottom right, red, yellow);
+} */
+h1{
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
+  text-shadow: 4px 4px grey;
+}
+hr{
+  width: 60%;
+
+}
