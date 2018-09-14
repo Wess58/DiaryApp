@@ -3,7 +3,7 @@
 <div class="container-fluid">
   <div class="row">
 
-    <form (ngSubmit)='submitDiary()' #diaryForm='ngForm'>
+    <form  (ngSubmit)='submitDiary()' #diaryForm='ngForm'>
       <div class="form-group">
 
         <input type="text" class="form-control" placeholder="Title of story" id="name" [(ngModel)]="newDiary.name" name="name"  #name="ngModel"  required>

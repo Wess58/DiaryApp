@@ -10,3 +10,10 @@ hr{
   width: 60%;
 
 }
+img{
+  width: 200px;
+  height: 200px;
+  opacity: 0.5;
+  margin-top: -3                                                                                                  em;
+  margin-right: 70%;
+}
